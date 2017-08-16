@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster|PT+Serif|Pattaya" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- bootbox code -->
+    <script src="js/bootbox.min.js"></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <title>My Blog</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+
+</head>
+
+<body class="other-page">
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand"><img src="images/nertuvele.png" class="navbar-img"style="height: 55px; display: inline-block; margin-top: -15px"></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">HOME</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+
+                        <!--show LOGIN if user logged out, or USERNAME when user logged in-->
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="logged-in-text">Logged in user</span> <b id="login-username"></b> <span class="caret"></span></a>
+                        <ul id="login-dp" class="dropdown-menu">
+
+                            <!--style when user logged-->
+                            <li id="logged-in-style">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                            <div class="form-group">
+                                                <a href="userprofile.html" class="logged-User-data"><b>Your profile data</b></a>
+                                            </div>
+                                            <div class="form-group">
+                                                <a href="editprofile.html" class="edit-user-profile"><b>Edit your profile</b></a>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="button" class="btn btn-secondary btn-block" id="log-out-submit">Log out</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-11">
+
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="post-subject" class="col-sm-4 control-label">Post subject</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="post-subject" placeholder="Post subject">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="post-main-text" class="col-sm-4 control-label">Post text</label>
+                        <div class="col-sm-6">
+                            <textarea class="form-control" rows="12" id="post-main-text" placeholder="Post text"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-6">
+                            <button type="button" id="insert-post-btn" class="btn btn-default btn-block">Publish post</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
